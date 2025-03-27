@@ -3,27 +3,36 @@ describe('template spec', () => {
     cy.visit('https://by-portal-shopping-cart-new.spnode.net/external/')
   })
 
-  it('get', () => {
+  it('1.get', () => {
     cy.get('[data-automation-id="step_title"]')
   })
 
-  it('contains', () => {
+  it('2.contains', () => {
     cy.get('[data-automation-id="subscription_p_name"]').contains('Mobile')
   })
 
-  it('find', () => {
+  it('3.find', () => {
     cy.get('[data-automation-id="subscription_plans"]').find(
       '[data-automation-id="subscription_p"]'
     )
   })
 
-  it('eq', () => {
+  it('4.eq', () => {
     cy.get('[data-automation-id="subscription_plans"]')
       .find('[data-automation-id="subscription_p"]')
       .eq(1)
   })
 
-  it('children', () => {
+  it('5.children', () => {
     cy.get('[data-automation-id="subscription_plans"]').children()
+  })
+
+  it('6.parent', () => {
+    cy.get('[data-automation-id="subscription_p"]').parent()
+    cy.get('[data-automation-id="subscription_p"]').parents()
+  })
+
+  it('`7.hard_levev**`', () => {
+    cy.get('[data-automation-id="subscription_p_name"]').contains('Lyubov Test').parent()
   })
 })
