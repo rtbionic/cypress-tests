@@ -28,11 +28,11 @@ describe('template spec', () => {
   })
 
   it('6.parent', () => {
-    cy.get('[data-automation-id="subscription_p"]').parent()
-    cy.get('[data-automation-id="subscription_p"]').parents()
+    cy.get('[data-automation-id="subscription_p"]').contains('For Testing Purposes').parent()
+    cy.get('[data-automation-id="subscription_p"]').contains('Frantsuzov').parents()
   })
 
   it('`7.hard_levev**`', () => {
-    cy.get('[data-automation-id="subscription_p_name"]').contains('Lyubov Test').parent()
+    cy.get('[data-automation-id="subscription_p_name"]').contains('Lyubov Test').parent('div')
   })
 })
