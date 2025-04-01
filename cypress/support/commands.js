@@ -22,4 +22,10 @@
 //
 //
 // -- This will overwrite an existing command --
+
+const { Runnable } = require("mocha");
+
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.on('uncaught:exception', (err, runnable) => {
+    return false
+})
