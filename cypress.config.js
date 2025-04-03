@@ -1,4 +1,4 @@
-const { defineConfig } = require("cypress");
+const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
   pageLoadTimeout: 60000,
@@ -9,4 +9,4 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
   },
-});
+})
